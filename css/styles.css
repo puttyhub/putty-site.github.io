@@ -1,0 +1,65 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern, clean sans-serif font */
+    background-color: #F5F5F5; /* Soft off-white background */
+    color: #1A1A1A; /* Dark charcoal text for contrast */
+    font-size: 16px; /* Standard readable font size */
+    margin: 0;
+    padding: 8vw; /* Increased padding for spaciousness */
+    line-height: 1.6;
+}
+
+a {
+    color: #1A1A1A; /* Inherit text color */
+    text-decoration: none; /* No underline by default */
+    border-bottom: 1px solid #1A1A1A; /* Subtle underline */
+    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
+}
+
+a:hover {
+    color: #888888; /* Lighter gray on hover */
+    border-color: #888888;
+}
+
+.container {
+    width: 70vw; /* Slightly narrower for a more focused look */
+    max-width: 1000px; /* Max width for larger screens */
+    margin: 0 auto; /* Center content */
+    padding: 0; /* No internal padding */
+    border: none; /* No borders */
+}
+
+h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Consistent elegant font */
+    font-size: 3.5em; /* Larger, more impactful heading */
+    font-weight: 300; /* Lighter weight for sophistication */
+    text-align: left; /* Clean alignment */
+    letter-spacing: 0.05em; /* Subtle letter spacing for elegance */
+    margin: 0 0 1.5em 0; /* Adjusted spatial austerity */
+    text-transform: uppercase;
+}
+
+p {
+    margin: 1.2em 0; /* Increased spatial austerity */
+    font-size: 1.1em; /* Slightly larger body text */
+    line-height: 1.8;
+}
+
+.nav {
+    margin-top: 4em; /* Increased spatial separation */
+    text-align: left; /* Clean alignment */
+}
+
+.nav a {
+    display: inline-block; /* Display links inline for a more modern menu */
+    margin-right: 2em; /* Horizontal spacing between links */
+    padding-bottom: 0.2em; /* Small padding for the underline */
+    font-size: 1.1em; /* Consistent with body text */
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid transparent; /* Transparent border by default */
+}
+
+.nav a:hover {
+    border-color: #1A1A1A; /* Solid border on hover */
+}
