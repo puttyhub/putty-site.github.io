@@ -7,7 +7,11 @@ body {
     padding: 20px; /* Fixed padding */
     line-height: 1.4;
     border: 2px solid #000000; /* Black border around the page */
-    text-align: center; /* Center all inline and inline-block content */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 a {
@@ -23,10 +27,11 @@ a:hover {
 
 .container {
     width: 760px; /* Fixed width layout */
-    margin: 0 auto; /* Center content */
+    margin: 0; /* Remove auto margin as flexbox handles centering */
     padding: 20px; /* Slightly increased internal padding for bespoke feel */
-    border: 1px solid #000000; /* Black border for container */
+    border: 1px solid #000000; /* Thin black border for container */
     background-color: #FFFFFF; /* White background for content area */
+    box-shadow: 5px 5px 0px #000000; /* Subtle shadow for depth */
 }
 
 h1 {
