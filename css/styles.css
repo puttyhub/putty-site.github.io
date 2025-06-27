@@ -1,65 +1,80 @@
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern, clean sans-serif font */
-    background-color: #F5F5F5; /* Soft off-white background */
-    color: #1A1A1A; /* Dark charcoal text for contrast */
-    font-size: 16px; /* Standard readable font size */
+    font-family: 'Lucida Console', 'Monaco', monospace; /* Default system monospace font */
+    background-color: #00FF00; /* Harsh green background */
+    color: #000000; /* Black text for high contrast */
+    font-size: 14px; /* Utilitarian font size */
     margin: 0;
-    padding: 8vw; /* Increased padding for spaciousness */
-    line-height: 1.6;
+    padding: 20px; /* Fixed padding */
+    line-height: 1.4;
+    border: 2px solid #000000; /* Black border around the page */
 }
 
 a {
-    color: #1A1A1A; /* Inherit text color */
+    color: #0000FF; /* Bright blue links */
     text-decoration: none; /* No underline by default */
-    border-bottom: 1px solid #1A1A1A; /* Subtle underline */
-    transition: color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover */
+    border-bottom: 1px solid #0000FF; /* Blue underline */
 }
 
 a:hover {
-    color: #888888; /* Lighter gray on hover */
-    border-color: #888888;
+    color: #FF0000; /* Red on hover */
+    border-color: #FF0000;
 }
 
 .container {
-    width: 70vw; /* Slightly narrower for a more focused look */
-    max-width: 1000px; /* Max width for larger screens */
+    width: 760px; /* Fixed width layout */
     margin: 0 auto; /* Center content */
-    padding: 0; /* No internal padding */
-    border: none; /* No borders */
+    padding: 10px; /* Minimal internal padding */
+    border: 1px solid #000000; /* Black border for container */
+    background-color: #FFFFFF; /* White background for content area */
 }
 
 h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Consistent elegant font */
-    font-size: 3.5em; /* Larger, more impactful heading */
-    font-weight: 300; /* Lighter weight for sophistication */
-    text-align: left; /* Clean alignment */
-    letter-spacing: 0.05em; /* Subtle letter spacing for elegance */
-    margin: 0 0 1.5em 0; /* Adjusted spatial austerity */
+    font-family: 'Lucida Console', 'Monaco', monospace; /* Consistent system font */
+    font-size: 2.5em; /* Large, impactful heading */
+    font-weight: bold; /* Bold for emphasis */
+    text-align: left; /* Rigid alignment */
+    letter-spacing: 0; /* No letter spacing */
+    margin: 0 0 1em 0; /* Utilitarian spacing */
     text-transform: uppercase;
+    color: #000000; /* Black heading text */
+}
+
+h2 {
+    font-family: 'Lucida Console', 'Monaco', monospace; /* Consistent system font */
+    font-size: 1.8em; /* Sub-heading size */
+    font-weight: bold;
+    text-align: left;
+    margin: 1.5em 0 0.8em 0;
+    text-transform: uppercase;
+    color: #000000;
 }
 
 p {
-    margin: 1.2em 0; /* Increased spatial austerity */
-    font-size: 1.1em; /* Slightly larger body text */
-    line-height: 1.8;
+    margin: 0.8em 0; /* Utilitarian spacing */
+    font-size: 1em;
+    line-height: 1.5;
+    color: #000000; /* Black paragraph text */
 }
 
 .nav {
-    margin-top: 4em; /* Increased spatial separation */
-    text-align: left; /* Clean alignment */
+    margin-top: 2em; /* Spatial separation */
+    text-align: left; /* Rigid alignment */
+    border-top: 1px solid #000000; /* Separator line */
+    padding-top: 1em;
 }
 
 .nav a {
-    display: inline-block; /* Display links inline for a more modern menu */
-    margin-right: 2em; /* Horizontal spacing between links */
-    padding-bottom: 0.2em; /* Small padding for the underline */
-    font-size: 1.1em; /* Consistent with body text */
-    font-weight: 400;
+    display: block; /* Stack links vertically */
+    margin: 0.5em 0; /* Vertical spacing */
+    font-size: 1.1em;
+    font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
-    border-bottom: 1px solid transparent; /* Transparent border by default */
+    letter-spacing: 0;
+    border-bottom: none; /* No underline for stacked links */
+    color: #000000; /* Black link text */
 }
 
 .nav a:hover {
-    border-color: #1A1A1A; /* Solid border on hover */
+    color: #FF0000; /* Red on hover */
+    background-color: #FFFF00; /* Yellow background on hover */
 }
