@@ -5,45 +5,49 @@
     <title>PUTTY - INQUIRY</title>
     <style>
         body {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #FFFFFF;
-            color: #000000;
-            font-size: 14px;
+            font-family: monospace; /* Stark, fixed-width system font */
+            background-color: #000000; /* Monochrome background */
+            color: #FFFFFF; /* Contrasting monochrome text */
+            font-size: 12px; /* Smaller, more archival feel */
             margin: 0;
-            padding: 40px 0;
+            padding: 5vw; /* Ample black/white space */
+            line-height: 1.5;
         }
         a {
-            color: #000000;
-            text-decoration: underline;
+            color: #FFFFFF; /* Raw hyperlinks */
+            text-decoration: none; /* No underline by default */
+            border-bottom: 1px solid #FFFFFF; /* Subtle emphasis on links */
         }
         a:hover {
-            text-decoration: none;
+            color: #CCCCCC; /* Slight hover effect */
+            border-color: #CCCCCC;
         }
         .container {
-            width: 640px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #000000;
+            width: 80vw; /* Fixed grid feel, relative to viewport */
+            max-width: 960px; /* Max width for larger screens */
+            margin: 0 auto; /* Center content */
+            padding: 0; /* No internal padding */
+            border: none; /* No borders */
         }
         h1 {
-            font-family: "Times New Roman", Times, serif;
-            font-size: 24px;
+            font-family: monospace; /* Consistent system font */
+            font-size: 2em; /* Emphasize with size, not elaborate styling */
             font-weight: normal;
-            text-align: center;
-            letter-spacing: 0.5em;
-            margin: 10px 0 40px 0;
+            text-align: left; /* Stark alignment */
+            letter-spacing: 0; /* No letter spacing */
+            margin: 0 0 2em 0; /* Spatial austerity */
             text-transform: uppercase;
         }
         p {
-            line-height: 1.6;
-            margin: 20px 0;
+            margin: 1em 0; /* Spatial austerity */
         }
         .nav {
-            margin-top: 40px;
-            text-align: center;
+            margin-top: 3em; /* Spatial separation */
+            text-align: left; /* Stark alignment */
         }
         .nav a {
-            margin: 0 15px;
+            display: block; /* Stack links for a list-like feel */
+            margin: 0.5em 0; /* Vertical spacing */
         }
     </style>
 </head>
