@@ -87,3 +87,34 @@ p {
     color: #555555; /* Darker gray on hover */
     background-color: transparent; /* No background on hover */
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduce overall padding */
+    }
+
+    .container {
+        width: 95%; /* Make container fluid */
+        padding: 15px; /* Adjust internal padding */
+    }
+
+    h1 {
+        font-size: 2em; /* Smaller heading on mobile */
+        padding: 15px; /* Adjust header padding */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Smaller sub-heading on mobile */
+    }
+
+    p {
+        font-size: 0.9em; /* Smaller paragraph text on mobile */
+        max-width: 100%; /* Allow paragraphs to take full width */
+    }
+
+    .nav a {
+        margin: 0 0.5em; /* Reduce horizontal spacing for nav links */
+        font-size: 1em; /* Adjust nav link font size */
+    }
+}
