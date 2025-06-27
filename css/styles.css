@@ -1,129 +1,58 @@
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #FFFFFF;
+    color: #000000;
     margin: 0;
     padding: 0;
-    color: #333;
-    background: #fff;
-    font-size: 100%;
-}
-
-/* Header and Top Container */
-
-.navbar {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 10%;
-    position: fixed;
-}
-
-.navbar nav {
-    display: flex;
-    gap: 40px;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 150%;
+    text-align: center;
 }
 
 .container {
-    margin: auto;
-    padding: 15px;
-    max-width: 1250px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
 }
 
-.row {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
 }
 
-#top-pic, #top-desc {
-    padding: 5px;
-    grid-column: span 6;
+p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
 }
 
-#top-pic img {
-    text-align: left;
-    width: 240px;
-    height: 240px;
-}
-
-.image-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.image-container img {
-    width: auto;
-    height: 100%;
-}
-
-.hero {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 20px;
-    padding: 50px 10%;
-}
-
-.hero a {
+a {
+    color: #000000;
     text-decoration: none;
-    color: #333;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
 }
 
-.hero h1 {
-    color: #000000;
-    font-style: bold;
-    margin: auto;
+a:hover {
+    background-color: #000000;
+    color: #FFFFFF;
 }
 
-.hero h2 {
-    color: #000000;
-    margin: auto;
+.logo {
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 1rem;
+    margin: 2rem 0;
 }
 
-.hero p { 
-    font-size: 20px;
-    line-height: 1.6;
+.nav {
+    margin-bottom: 3rem;
 }
 
-.hero img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (max-width: 1000px) {
-    .navbar nav {
-        gap: 8px;
-    }  
-
-    .navbar a {
-        font-size: 115%;
-    }
-
-    .hero { 
-        grid-template-columns: 1fr;
-    }
-    
-    .hero img {
-        width: 100%;
-    }
-}
-.fab.fa-twitter {
-    color: black; /* Or #000 for black */
-    font-size: 24px; /* Adjust size as needed */
-    margin-right: 4px;
-}
-.social-icon {
-    margin-right: 5px; /* Spacing between icons */
-}
-
-.username {
-    margin-left: 12px; /* Spacing before the text */
-}
-.social-links .fab.fa-instagram {
-    font-size: 24px; /* Adjust this value to match the size of the Twitter icon */
+.nav a {
+    margin: 0 1.5rem;
+    font-size: 1.2rem;
+    border-bottom: none;
 }
