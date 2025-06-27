@@ -1,12 +1,12 @@
 body {
     font-family: 'Lucida Console', 'Monaco', monospace; /* Default system monospace font */
-    background-color: #00FF00; /* Harsh green background */
-    color: #000000; /* Black text for high contrast */
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text */
     font-size: 14px; /* Utilitarian font size */
     margin: 0;
     padding: 20px; /* Fixed padding */
     line-height: 1.4;
-    border: 2px solid #000000; /* Black border around the page */
+    /* Removed body border */
     display: flex; /* Use flexbox for centering */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -15,23 +15,23 @@ body {
 }
 
 a {
-    color: #0000FF; /* Bright blue links */
+    color: #000000; /* Black links */
     text-decoration: none; /* No underline by default */
-    border-bottom: 1px solid #0000FF; /* Blue underline */
+    border-bottom: 1px solid #000000; /* Black underline */
 }
 
 a:hover {
-    color: #FF0000; /* Red on hover */
-    border-color: #FF0000;
+    color: #555555; /* Darker gray on hover */
+    border-color: #555555;
 }
 
 .container {
     width: 760px; /* Fixed width layout */
     margin: 0; /* Remove auto margin as flexbox handles centering */
-    padding: 20px; /* Slightly increased internal padding for bespoke feel */
-    border: 1px solid #000000; /* Thin black border for container */
+    padding: 20px; /* Internal padding */
+    border: none; /* Removed container border */
     background-color: #FFFFFF; /* White background for content area */
-    box-shadow: 5px 5px 0px #000000; /* Subtle shadow for depth */
+    /* Removed box-shadow */
 }
 
 h1 {
@@ -43,6 +43,8 @@ h1 {
     margin: 0 0 1em 0; /* Utilitarian spacing */
     text-transform: uppercase;
     color: #000000; /* Black heading text */
+    border: 2px solid #000000; /* Thin black border around the header */
+    padding: 20px; /* Wide margin effect within the border */
 }
 
 h2 {
@@ -82,6 +84,6 @@ p {
 }
 
 .nav a:hover {
-    color: #FF0000; /* Red on hover */
-    background-color: #FFFF00; /* Yellow background on hover */
+    color: #555555; /* Darker gray on hover */
+    background-color: transparent; /* No background on hover */
 }
