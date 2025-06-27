@@ -7,6 +7,7 @@ body {
     padding: 20px; /* Fixed padding */
     line-height: 1.4;
     border: 2px solid #000000; /* Black border around the page */
+    text-align: center; /* Center all inline and inline-block content */
 }
 
 a {
@@ -23,7 +24,7 @@ a:hover {
 .container {
     width: 760px; /* Fixed width layout */
     margin: 0 auto; /* Center content */
-    padding: 10px; /* Minimal internal padding */
+    padding: 20px; /* Slightly increased internal padding for bespoke feel */
     border: 1px solid #000000; /* Black border for container */
     background-color: #FFFFFF; /* White background for content area */
 }
@@ -32,7 +33,7 @@ h1 {
     font-family: 'Lucida Console', 'Monaco', monospace; /* Consistent system font */
     font-size: 2.5em; /* Large, impactful heading */
     font-weight: bold; /* Bold for emphasis */
-    text-align: left; /* Rigid alignment */
+    text-align: center; /* Center heading */
     letter-spacing: 0; /* No letter spacing */
     margin: 0 0 1em 0; /* Utilitarian spacing */
     text-transform: uppercase;
@@ -43,29 +44,30 @@ h2 {
     font-family: 'Lucida Console', 'Monaco', monospace; /* Consistent system font */
     font-size: 1.8em; /* Sub-heading size */
     font-weight: bold;
-    text-align: left;
+    text-align: center; /* Center sub-heading */
     margin: 1.5em 0 0.8em 0;
     text-transform: uppercase;
     color: #000000;
 }
 
 p {
-    margin: 0.8em 0; /* Utilitarian spacing */
+    margin: 0.8em auto; /* Utilitarian spacing, centered paragraphs */
     font-size: 1em;
     line-height: 1.5;
     color: #000000; /* Black paragraph text */
+    max-width: 600px; /* Limit paragraph width for readability */
 }
 
 .nav {
     margin-top: 2em; /* Spatial separation */
-    text-align: left; /* Rigid alignment */
+    text-align: center; /* Center navigation */
     border-top: 1px solid #000000; /* Separator line */
     padding-top: 1em;
 }
 
 .nav a {
-    display: block; /* Stack links vertically */
-    margin: 0.5em 0; /* Vertical spacing */
+    display: inline-block; /* Display links inline for a more bespoke menu */
+    margin: 0 1em; /* Horizontal spacing */
     font-size: 1.1em;
     font-weight: bold;
     text-transform: uppercase;
