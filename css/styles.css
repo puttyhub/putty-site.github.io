@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lucida Console', 'Monaco', monospace; /* Default system monospace font */
+    font-family: Arial, sans-serif; /* Basic sans-serif font */
     background-color: #FFFFFF; /* White background */
     color: #000000; /* Black text */
     font-size: 14px; /* Utilitarian font size */
@@ -35,7 +35,7 @@ a:hover {
 }
 
 h1 {
-    font-family: 'Lucida Console', 'Monaco', monospace; /* Consistent system font */
+    font-family: Arial, sans-serif; /* Basic sans-serif font */
     font-size: 2.5em; /* Large, impactful heading */
     font-weight: bold; /* Bold for emphasis */
     text-align: center; /* Center heading */
@@ -48,7 +48,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Lucida Console', 'Monaco', monospace; /* Consistent system font */
+    font-family: Arial, sans-serif; /* Basic sans-serif font */
     font-size: 1.8em; /* Sub-heading size */
     font-weight: bold;
     text-align: center; /* Center sub-heading */
