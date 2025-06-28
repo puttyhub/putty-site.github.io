@@ -1,91 +1,96 @@
 body {
-    font-family: Arial, sans-serif; /* Basic sans-serif font */
-    background-color: #FFFFFF; /* White background */
-    color: #000000; /* Black text */
-    font-size: 14px; /* Utilitarian font size */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #FEFEFE;
+    color: #1A1A1A;
+    font-size: 15px;
     margin: 0;
-    padding: 20px; /* Fixed padding */
-    line-height: 1.4;
-    /* Removed body border */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    min-height: 100vh; /* Ensure body takes full viewport height */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    padding: 20px;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-    color: #000000; /* Black links */
-    text-decoration: none; /* No underline by default */
-    border-bottom: 1px solid #000000; /* Black underline */
+    color: #1A1A1A;
+    text-decoration: none;
+    border-bottom: 1px solid #1A1A1A;
+    transition: all 0.2s ease;
 }
 
 a:hover {
-    color: #555555; /* Darker gray on hover */
-    border-color: #555555;
+    color: #666666;
+    border-color: #666666;
 }
 
 .container {
-    width: 760px; /* Fixed width layout */
-    margin: 0; /* Remove auto margin as flexbox handles centering */
-    padding: 20px; /* Internal padding */
-    border: none; /* Removed container border */
-    background-color: #FFFFFF; /* White background for content area */
-    /* Removed box-shadow */
+    width: 760px;
+    margin: 0;
+    padding: 32px;
+    border: none;
+    background-color: #FEFEFE;
 }
 
 h1 {
-    font-family: Arial, sans-serif; /* Basic sans-serif font */
-    font-size: 2.5em; /* Large, impactful heading */
-    font-weight: bold; /* Bold for emphasis */
-    text-align: center; /* Center heading */
-    letter-spacing: 0; /* No letter spacing */
-    margin: 0 0 1em 0; /* Utilitarian spacing */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin: 0 0 1.2em 0;
     text-transform: uppercase;
-    color: #000000; /* Black heading text */
-    border: 2px solid #000000; /* Thin black border around the header */
-    padding: 20px; /* Wide margin effect within the border */
+    color: #1A1A1A;
+    border: 1px solid #1A1A1A;
+    padding: 24px;
 }
 
 h2 {
-    font-family: Arial, sans-serif; /* Basic sans-serif font */
-    font-size: 1.8em; /* Sub-heading size */
-    font-weight: bold;
-    text-align: center; /* Center sub-heading */
-    margin: 1.5em 0 0.8em 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.8em;
+    font-weight: 300;
+    text-align: center;
+    margin: 1.8em 0 1em 0;
     text-transform: uppercase;
-    color: #000000;
+    color: #1A1A1A;
+    letter-spacing: 0.3px;
 }
 
 p {
-    margin: 0.8em auto; /* Utilitarian spacing, centered paragraphs */
+    margin: 1em auto;
     font-size: 1em;
-    line-height: 1.5;
-    color: #000000; /* Black paragraph text */
-    max-width: 600px; /* Limit paragraph width for readability */
+    line-height: 1.7;
+    color: #2A2A2A;
+    max-width: 580px;
+    font-weight: 400;
 }
 
 .nav {
-    margin-top: 2em; /* Spatial separation */
-    text-align: center; /* Center navigation */
-    border-top: 1px solid #000000; /* Separator line */
-    padding-top: 1em;
+    margin-top: 2.5em;
+    text-align: center;
+    border-top: 1px solid #D0D0D0;
+    padding-top: 1.2em;
 }
 
 .nav a {
-    display: inline-block; /* Display links inline for a more bespoke menu */
-    margin: 0 1em; /* Horizontal spacing */
+    display: inline-block;
+    margin: 0 1em;
     font-size: 1.1em;
-    font-weight: bold;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0;
-    border-bottom: none; /* No underline for stacked links */
-    color: #000000; /* Black link text */
+    letter-spacing: 0.2px;
+    border-bottom: none;
+    color: #1A1A1A;
+    transition: all 0.2s ease;
 }
 
 .nav a:hover {
-    color: #555555; /* Darker gray on hover */
-    background-color: transparent; /* No background on hover */
+    color: #666666;
+    background-color: transparent;
 }
 
 /* Mobile responsiveness */
