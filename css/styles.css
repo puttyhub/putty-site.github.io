@@ -1,3 +1,7 @@
+/* prettier: print-width=80 */
+/* Updated full stylesheet — rem-based sizes, improved mobile behavior,
+   pricing option styles, and accessibility tweaks. */
+
 /* base reset + sensible box-sizing */
 *,
 *::before,
@@ -10,6 +14,7 @@ html {
   -ms-text-size-adjust: 100%;     /* Disable IE text auto-adjust */
   text-size-adjust: 100%;         /* Standard property */
   font-size: 16px;               /* Base for rem sizing */
+  height: 100%;
 }
 
 html,
@@ -24,17 +29,16 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #FEFEFE;
   color: #1A1A1A;
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px (0.9375 * 16) */
   line-height: 1.6;
-  padding: 20px;
+  padding: 1.25rem;     /* 20px */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Use normal flow instead of centering the whole page vertically */
-  display: block;
+  display: block;       /* normal flow (no vertical centering) */
 }
 
-/* Make links tactile and clear */
+/* Links */
 a {
   color: #1A1A1A;
   text-decoration: none;
@@ -49,62 +53,62 @@ a:focus {
   outline: none;
 }
 
-/* Use max-width so the layout is fluid on small screens */
+/* Layout container */
 .container {
-  max-width: 760px;
+  max-width: 47.5rem;   /* ~760px */
   width: 100%;
-  margin: 0 auto; /* center horizontally */
-  padding: 32px;
+  margin: 0 auto;
+  padding: 2rem;        /* 32px */
   background-color: #FEFEFE;
   border: none;
 }
 
-/* Headings */
+/* Headings (use rem for consistent scaling) */
 h1 {
-  font-size: 2.5em;
+  font-size: 2rem;      /* 32px */
   font-weight: 300;
   text-align: center;
-  letter-spacing: 0.5px;
-  margin: 0 0 1.2em 0;
+  letter-spacing: 0.031rem; /* ~0.5px */
+  margin: 0 0 1.2rem 0;
   text-transform: uppercase;
   color: #1A1A1A;
   border: 1px solid #1A1A1A;
-  padding: 24px;
+  padding: 1.5rem;      /* 24px */
   word-break: break-word;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 1.125rem;  /* 18px */
   font-weight: 300;
   text-align: center;
-  margin: 1.8em 0 1em 0;
+  margin: 1.8rem 0 1rem 0;
   text-transform: uppercase;
   color: #1A1A1A;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.018rem; /* ~0.3px */
 }
 
 /* Paragraphs */
 p {
-  margin: 1em auto;
-  font-size: 1em;
+  margin: 1rem auto;
+  font-size: 1rem;      /* 16px */
   line-height: 1.7;
   color: #2A2A2A;
-  max-width: 580px;
+  max-width: 36.25rem;  /* ~580px */
   font-weight: 400;
 }
 
 /* Navigation */
 .nav {
-  margin-bottom: 2.5em;
+  margin-bottom: 2.5rem;
   text-align: center;
   border-bottom: 1px solid #D0D0D0;
-  padding-bottom: 1.2em;
+  padding-bottom: 1.2rem;
 }
 
 .nav a {
   display: inline-block;
-  margin: 0 1em;
-  font-size: 1.1em;
+  margin: 0 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.2px;
@@ -114,21 +118,106 @@ p {
 
 .nav a:active,
 .nav a:focus {
-  outline: 2px solid rgba(0,0,0,0.08);
+  outline: 3px solid rgba(0, 0, 0, 0.06);
+  outline-offset: 2px;
 }
 
-/* Sections, lists, table */
+/* Sections and lists */
 .section {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 ul li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
+}
+
+/* Pricing option card styles */
+.pricing-option {
+  margin-bottom: 2.5rem;
+  padding: 1.125rem;   /* 18px */
+  border-radius: 0.375rem; /* 6px */
+  background: #ffffff;
+  box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.04);
+  border: 0.0625rem solid #ececec;
+}
+
+.pricing-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #eef6ff;
+  color: #0b67c2;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+/* Feature list inside cards */
+.features {
+  margin: 0.5rem 0 1rem 0;
+  padding-left: 1rem;
+}
+
+.features li {
+  margin-bottom: 0.75rem;
+}
+
+/* Price and CTA rows */
+.price-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.375rem;
+}
+
+.price {
+  font-size: 1.0625rem; /* ~17px */
+  font-weight: 700;
+  color: #111;
+}
+
+.included {
+  font-size: 0.9375rem;
+  color: #444;
+  text-align: center;
+  max-width: 42.5rem;
+}
+
+.cta-row {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.625rem 1.125rem; /* 10px 18px */
+  background: #111;
+  color: #fff;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #111;
+  border: 1px solid #ddd;
 }
 
 /* Make tables responsive */
@@ -141,63 +230,99 @@ ul li {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1em;
-  min-width: 600px; /* optional: keeps table readable on wide screens */
+  margin-top: 1rem;
+  min-width: 100%; /* allow table to adapt; let wrapper handle scroll */
 }
 
 th,
 td {
   border: 1px solid #D0D0D0;
-  padding: 0.8em;
+  padding: 0.5rem 0.75rem; /* 8px 12px */
   text-align: left;
   vertical-align: top;
+  font-size: 0.9375rem;
 }
 
 th {
   background-color: #F5F5F5;
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+/* Small helpers */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile responsiveness (max-width: 768px) */
+@media (max-width: 48rem) {
   body {
-    padding: 10px;
+    padding: 0.625rem; /* 10px */
   }
 
   .container {
-    padding: 15px;
+    padding: 0.9375rem; /* 15px */
   }
 
   h1 {
-    font-size: 1.6em;
-    padding: 12px;
-    letter-spacing: 0.4px;
+    font-size: 1.6rem;   /* 25.6px */
+    padding: 0.75rem;    /* 12px */
+    letter-spacing: 0.025rem;
   }
 
   h2 {
-    font-size: 1.25em;
+    font-size: 1.2rem;   /* 19.2px — slightly larger than before for readability */
   }
 
   p {
-    font-size: 0.95em;
+    font-size: 0.95rem;
     max-width: 100%;
   }
 
   /* Stack nav items vertically on small screens for easier tapping */
   .nav {
     text-align: left;
-    padding-bottom: 0.6em;
+    padding-bottom: 0.6rem;
   }
 
   .nav a {
     display: block;
-    margin: 0.35em 0;
-    font-size: 1.05em;
-    padding: 6px 0;
+    margin: 0.35rem 0;
+    font-size: 1.05rem;
+    padding: 0.375rem 0;
   }
 
-  /* Reduce table min width so less horizontal scroll if possible */
+  /* Pricing card adjustments for mobile */
+  .pricing-option {
+    padding: 0.75rem;
+  }
+
+  .price {
+    font-size: 1rem;
+  }
+
+  .included {
+    font-size: 0.9rem;
+  }
+
+  /* Tables: let table be as wide as needed; wrapper will scroll */
   table {
     min-width: 100%;
+  }
+}
+
+/* Larger screens: fine-tune spacing */
+@media (min-width: 64rem) {
+  .container {
+    padding: 2.5rem;
+  }
+
+  .pricing-option {
+    padding: 1.5rem;
+  }
+
+  .price {
+    font-size: 1.125rem;
   }
 }
