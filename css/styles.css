@@ -1,6 +1,7 @@
 /* prettier: print-width=80 */
-/* Updated full stylesheet — rem-based sizes, improved mobile behavior,
-   pricing option styles, and accessibility tweaks. */
+/* Full stylesheet — rem-based sizes, improved mobile behavior,
+   pricing option styles, centered stacked nav on mobile, and
+   accessibility tweaks. */
 
 /* base reset + sensible box-sizing */
 *,
@@ -255,7 +256,7 @@ th {
   align-items: center;
 }
 
-/* Mobile responsiveness (max-width: 768px) */
+/* Mobile responsiveness (max-width: 768px / 48rem) */
 @media (max-width: 48rem) {
   body {
     padding: 0.625rem; /* 10px */
@@ -280,9 +281,12 @@ th {
     max-width: 100%;
   }
 
-  /* Stack nav items vertically on small screens for easier tapping */
+  /* Center stacked nav items on mobile for easier tapping */
   .nav {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centers stacked links */
+    text-align: center;
     padding-bottom: 0.6rem;
   }
 
