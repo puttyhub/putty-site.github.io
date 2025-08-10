@@ -139,7 +139,7 @@ ul li {
 }
 
 /* Pricing option card styles */
-.card {
+.pricing-option {
   margin-bottom: 2.5rem;
   padding: 1.125rem;   /* 18px */
   border-radius: 0rem; /* 6px */
@@ -300,7 +300,7 @@ th {
   }
 
   /* Pricing card adjustments for mobile */
-  .card {
+  .pricing-option {
     padding: 0.75rem;
   }
 
@@ -324,7 +324,7 @@ th {
     padding: 2.5rem;
   }
 
-  .card {
+  .pricing-option {
     padding: 1.5rem;
   }
 
