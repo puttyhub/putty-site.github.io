@@ -139,7 +139,7 @@ ul li {
 }
 
 /* Pricing option card styles */
-.pricing-option {
+.card {
   margin-bottom: 2.5rem;
   padding: 1.125rem;   /* 18px */
   border-radius: 0rem; /* 6px */
