@@ -300,7 +300,7 @@ th {
   }
 
   /* Pricing card adjustments for mobile */
-  .pricing-option {
+  .card {
     padding: 0.75rem;
   }
 
@@ -324,7 +324,7 @@ th {
     padding: 2.5rem;
   }
 
-  .pricing-option {
+  .card {
     padding: 1.5rem;
   }
 
