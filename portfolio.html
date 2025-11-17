@@ -17,15 +17,15 @@
         font-family: Helvetica, Arial, sans-serif;
     }
 
-    .label {
-        font-size: 14px;
-        font-weight: normal;
-        letter-spacing: 0.05em;
-        color: #777;
-        text-align: center;
-        margin-top: 25px;
-    }
-
+.label {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color: #777;
+    /* top  right  bottom  left */
+    margin: 25px 0 0 40px;  /* push it in from the left */
+    text-align: left;       /* stop centering the text */
+}
     #viewer {
         width: 100vw;
         height: calc(100vh - 60px);
@@ -51,6 +51,7 @@
         position: fixed;
         top: 50%;
         transform: translateY(-50%);
+        font-family: "Menlo", "Courier New", monospace;
         font-size: 50px;
         color: black;
         cursor: pointer;
