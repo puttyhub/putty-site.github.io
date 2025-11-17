@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI Portfolio</title>
+
+<link rel="icon" type="image/x-icon" href="file:///Users/connorleela/Desktop/portfolio/favicon.ico">
+
+<style>
+    body {
+        background: white;
+        color: black;
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1800px;
+        width: 100%;
+        justify-items: center;
+    }
+
+    img {
+        width: 100%;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        transition: 0.25s;
+    }
+
+    img:hover {
+        transform: scale(1.02);
+    }
+
+    figure {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Modal */
+    #modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.85);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modal img {
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        width: auto;
+        height: auto;
+        border-radius: 6px;
+        display: block;
+    }
+
+    #closeBtn {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* Navigation arrows */
+    .arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 50px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+        padding: 20px;
+        font-weight: bold;
+        opacity: 0.7;
+        transition: 0.2s;
+    }
+
+    .arrow:hover {
+        opacity: 1;
+    }
+
+    #leftArrow {
+        left: 50px;
+    }
+
+    #rightArrow {
+        right: 50px;
+    }
+
+    /* Missing file display */
+    .broken-image {
+        width: 100%;
+        min-height: 200px;
+        border: 2px solid red;
+        background: #fff;
+        color: black;
+        font-size: 12px;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        cursor: pointer;
+        word-break: break-all;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="grid" id="gallery">
+<figure><img src="images/ComfyUI_00002_.png"></figure>
+<figure><img src="images/ComfyUI_00385_2.png"></figure>
+<figure><img src="images/ComfyUI_00384_.png"></figure>
+<figure><img src="images/multi_20250909_00082_.png"></figure>
+<figure><img src="images/multi_20250909_00011_.png"></figure>
+<figure><img src="images/multi_20250909_00095_.png"></figure>
+<figure><img src="images/ComfyUI_00003_.png"></figure>
+<figure><img src="images/ComfyUI_00002_.png"></figure>
+<figure><img src="images/ComfyUI_00009_.png"></figure>
+<figure><img src="images/ComfyUI_00091_.png"></figure>
+<figure><img src="images/ComfyUI_00021_.png"></figure>
+<figure><img src="images/ComfyUI_00088_.png"></figure>
+<figure><img src="images/ComfyUI_00026_.png"></figure>
+<figure><img src="images/cc-_00001_2.png"></figure>
+<figure><img src="images/ComfyUI_00030_.png"></figure>
+<figure><img src="images/ComfyUI_00333_.png"></figure>
+<figure><img src="images/ComfyUI_00018_.png"></figure>
+<figure><img src="images/FluxRedux_00007_.png"></figure>
+<figure><img src="images/cc-_00001_4.png"></figure>
+<figure><img src="images/cc-_00001_3.png"></figure>
+<figure><img src="images/cc-_00003_3.png"></figure>
+<figure><img src="images/cc-_00005_.png"></figure>
+<figure><img src="images/cc-_00005_4.png"></figure>
+<figure><img src="images/cc-_00011_.png"></figure>
+<figure><img src="images/cc-_00001_.png"></figure>
+<figure><img src="images/ComfyUI_00092_.png"></figure>
+<figure><img src="images/cc-_00003_5.png"></figure>
+<figure><img src="images/cc-_00016_.png"></figure>
+<figure><img src="images/cc-_00021_.png"></figure>
+<figure><img src="images/cc-_00018_.png"></figure>
+<figure><img src="images/cc-_00027_.png"></figure>
+<figure><img src="images/cc-_00029_.png"></figure>
+<figure><img src="images/cc-_00029_2.png"></figure>
+<figure><img src="images/cc-_00040_.png"></figure>
+<figure><img src="images/cc-_00012_.png"></figure>
+<figure><img src="images/cc-_00062_.png"></figure>
+<figure><img src="images/cc-_00053_2.png"></figure>
+<figure><img src="images/cc-_00053_.png"></figure>
+<figure><img src="images/cc-_00056_.png"></figure>
+<figure><img src="images/cc-_00067_.png"></figure>
+<figure><img src="images/cc-_00083_.png"></figure>
+<figure><img src="images/cc-_00084_.png"></figure>
+<figure><img src="images/cc-_00089_.png"></figure>
+<figure><img src="images/cc-_00090_.png"></figure>
+<figure><img src="images/cc-_00109_.png"></figure>
+<figure><img src="images/cc-_00178_.png"></figure>
+<figure><img src="images/cc-_00152.webp"></figure>
+<figure><img src="images/cc-_00124_.png"></figure>
+<figure><img src="images/cc-_00142_.png"></figure>
+<figure><img src="images/cc-_00167_.png"></figure>
+<figure><img src="images/cc-_00165_.png"></figure>
+<figure><img src="images/cc-_00192_.png"></figure>
+<figure><img src="images/cc-_00303_.png"></figure>
+<figure><img src="images/cc-_00213_.png"></figure>
+<figure><img src="images/cc-_00246_.png"></figure>
+<figure><img src="images/cc-_00241_.png"></figure>
+<figure><img src="images/cc-_00253_.png"></figure>
+<figure><img src="images/cc-_00324_2.png"></figure>
+<figure><img src="images/cc-_00325_.png"></figure>
+<figure><img src="images/cc-_00328_.png"></figure>
+</div>
+
+<!-- Modal -->
+<div id="modal">
+    <span id="closeBtn">×</span>
+    <span class="arrow" id="leftArrow">‹</span>
+    <img id="modalImg">
+    <span class="arrow" id="rightArrow">›</span>
+</div>
+
+<script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.getElementById("closeBtn");
+    const leftArrow = document.getElementById("leftArrow");
+    const rightArrow = document.getElementById("rightArrow");
+
+    const images = Array.from(document.querySelectorAll(".grid img"));
+    let currentIndex = -1;
+
+    function openModal(index) {
+        currentIndex = index;
+        modal.style.display = "flex";
+        modalImg.src = images[currentIndex].src;
+    }
+
+    function closeModal() {
+        modal.style.display = "none";
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImg.src = images[currentIndex].src;
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        modalImg.src = images[currentIndex].src;
+    }
+
+    // Detect and replace broken image paths
+    images.forEach((img, index) => {
+        img.addEventListener("error", () => {
+            const brokenPath = img.src;
+
+            const replacement = document.createElement("div");
+            replacement.className = "broken-image";
+            replacement.innerText = brokenPath;
+
+            img.replaceWith(replacement);
+
+            replacement.addEventListener("click", () => openModal(index));
+
+            images[index] = replacement; // maintain index for modal nav
+        });
+
+        img.addEventListener("click", () => openModal(index));
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    rightArrow.addEventListener("click", nextImage);
+    leftArrow.addEventListener("click", prevImage);
+
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (modal.style.display !== "flex") return;
+        if (e.key === "Escape") closeModal();
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+    });
+</script>
+
+</body>
+</html>
