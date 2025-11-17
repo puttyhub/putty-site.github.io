@@ -18,12 +18,30 @@
     }
 
     .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
         gap: 30px;
-        max-width: 1800px;
-        width: 100%;
-        justify-items: center;
+        padding: 0 40px;
+    }
+
+    .grid figure {
+        flex: 0 0 calc((100vw - 2 * 40px - 2 * 30px) / 3);
+        scroll-snap-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    @media (max-width: 768px) {
+        .grid figure {
+            flex: 0 0 calc(100vw - 2 * 20px);
+            padding: 0;
+        }
+
+        .grid {
+            padding: 0 20px;
+            gap: 20px;
+        }
     }
 
     img {
@@ -42,7 +60,6 @@
         padding: 0;
     }
 
-    /* Modal */
     #modal {
         display: none;
         position: fixed;
@@ -76,7 +93,6 @@
         font-weight: bold;
     }
 
-    /* Navigation arrows */
     .arrow {
         position: absolute;
         top: 50%;
@@ -102,91 +118,74 @@
     #rightArrow {
         right: 50px;
     }
-
-    /* Missing file display */
-    .broken-image {
-        width: 100%;
-        min-height: 200px;
-        border: 2px solid red;
-        background: #fff;
-        color: black;
-        font-size: 12px;
-        padding: 10px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-        cursor: pointer;
-        word-break: break-all;
-    }
-
 </style>
 </head>
 
 <body>
 
 <div class="grid" id="gallery">
-<figure><img src="images/ComfyUI_00002_.png"></figure>
-<figure><img src="images/ComfyUI_00385_2.png"></figure>
-<figure><img src="images/ComfyUI_00384_.png"></figure>
-<figure><img src="images/multi_20250909_00082_.png"></figure>
-<figure><img src="images/multi_20250909_00011_.png"></figure>
-<figure><img src="images/multi_20250909_00095_.png"></figure>
-<figure><img src="images/ComfyUI_00003_.png"></figure>
-<figure><img src="images/ComfyUI_00002_.png"></figure>
-<figure><img src="images/ComfyUI_00009_.png"></figure>
-<figure><img src="images/ComfyUI_00091_.png"></figure>
-<figure><img src="images/ComfyUI_00021_.png"></figure>
-<figure><img src="images/ComfyUI_00088_.png"></figure>
-<figure><img src="images/ComfyUI_00026_.png"></figure>
-<figure><img src="images/cc-_00001_2.png"></figure>
-<figure><img src="images/ComfyUI_00030_.png"></figure>
-<figure><img src="images/ComfyUI_00333_.png"></figure>
-<figure><img src="images/ComfyUI_00018_.png"></figure>
-<figure><img src="images/FluxRedux_00007_.png"></figure>
-<figure><img src="images/cc-_00001_4.png"></figure>
-<figure><img src="images/cc-_00001_3.png"></figure>
-<figure><img src="images/cc-_00003_3.png"></figure>
-<figure><img src="images/cc-_00005_.png"></figure>
-<figure><img src="images/cc-_00005_4.png"></figure>
-<figure><img src="images/cc-_00011_.png"></figure>
-<figure><img src="images/cc-_00001_.png"></figure>
-<figure><img src="images/ComfyUI_00092_.png"></figure>
-<figure><img src="images/cc-_00003_5.png"></figure>
-<figure><img src="images/cc-_00016_.png"></figure>
-<figure><img src="images/cc-_00021_.png"></figure>
-<figure><img src="images/cc-_00018_.png"></figure>
-<figure><img src="images/cc-_00027_.png"></figure>
-<figure><img src="images/cc-_00029_.png"></figure>
-<figure><img src="images/cc-_00029_2.png"></figure>
-<figure><img src="images/cc-_00040_.png"></figure>
-<figure><img src="images/cc-_00012_.png"></figure>
-<figure><img src="images/cc-_00062_.png"></figure>
-<figure><img src="images/cc-_00053_2.png"></figure>
-<figure><img src="images/cc-_00053_.png"></figure>
-<figure><img src="images/cc-_00056_.png"></figure>
-<figure><img src="images/cc-_00067_.png"></figure>
-<figure><img src="images/cc-_00083_.png"></figure>
-<figure><img src="images/cc-_00084_.png"></figure>
-<figure><img src="images/cc-_00089_.png"></figure>
-<figure><img src="images/cc-_00090_.png"></figure>
-<figure><img src="images/cc-_00109_.png"></figure>
-<figure><img src="images/cc-_00178_.png"></figure>
-<figure><img src="images/cc-_00152.webp"></figure>
-<figure><img src="images/cc-_00124_.png"></figure>
-<figure><img src="images/cc-_00142_.png"></figure>
-<figure><img src="images/cc-_00167_.png"></figure>
-<figure><img src="images/cc-_00165_.png"></figure>
-<figure><img src="images/cc-_00192_.png"></figure>
-<figure><img src="images/cc-_00303_.png"></figure>
-<figure><img src="images/cc-_00213_.png"></figure>
-<figure><img src="images/cc-_00246_.png"></figure>
-<figure><img src="images/cc-_00241_.png"></figure>
-<figure><img src="images/cc-_00253_.png"></figure>
-<figure><img src="images/cc-_00324_2.png"></figure>
-<figure><img src="images/cc-_00325_.png"></figure>
-<figure><img src="images/cc-_00328_.png"></figure>
+
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/ComfyUI_00002_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/ComfyUI_00385_%202.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/ComfyUI_00384_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/multi_20250909_00082_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/multi_20250909_00011_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/multi_20250909_00095_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00003_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00002_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00009_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00091_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00021_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00088_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00026_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00001_%202.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00030_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/ComfyUI_00333_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/ComfyUI_00018_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/FluxRedux_00007_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00001_%204.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00001_%203.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00003_%203.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00005_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00005_%204.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00011_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00001_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/joey/ComfyUI_00092_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00003_%205.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00016_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00021_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00018_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00027_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00029_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00029_%202.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00040_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00012_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00062_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00053_%202.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00053_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00056_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00067_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00083_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00084_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00089_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00090_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00109_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00178_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00152_.webp'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00124_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00142_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00167_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00165_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00192_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00303_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00213_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00246_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00241_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00253_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00324_%202.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00325_.png'></figure>
+<figure><img src='file:///Users/connorleela/Desktop/portfolio/cc/cc-_00328_.png'></figure>
+
 </div>
 
 <!-- Modal -->
@@ -227,22 +226,7 @@
         modalImg.src = images[currentIndex].src;
     }
 
-    // Detect and replace broken image paths
     images.forEach((img, index) => {
-        img.addEventListener("error", () => {
-            const brokenPath = img.src;
-
-            const replacement = document.createElement("div");
-            replacement.className = "broken-image";
-            replacement.innerText = brokenPath;
-
-            img.replaceWith(replacement);
-
-            replacement.addEventListener("click", () => openModal(index));
-
-            images[index] = replacement; // maintain index for modal nav
-        });
-
         img.addEventListener("click", () => openModal(index));
     });
 
